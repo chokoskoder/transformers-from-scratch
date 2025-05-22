@@ -22,6 +22,7 @@ class PositionalEncoding(nn.Module):
         self.d_model = d_model
         self.seq_len = seq_len
         self.dropout = nn.Dropout(dropout) #dropout is to make the model less overfit , but why tho and how does it work ? 
+        #it basically sets the value of some values to 0 and this makes the model adapt to lesser data making it less overfit
         
         #create a matrix of shape (seq_len , d_model )
         pe = torch.zeros(seq_len , d_model\ )
